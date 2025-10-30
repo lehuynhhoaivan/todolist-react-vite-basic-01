@@ -13,11 +13,18 @@ function App() {
     { id: 3, learn: 'Learn JavaScript' }
   ])
   console.log('Todo List:', todoList)
+  const addNewTodo = (name) => {
+    const newTodo = { id: 5, name: name }
+    setToDoList([...todoList, newTodo])
+    todoList.push(newTodo)
+  }
 
   return (
     <>
     <h1>TodoList</h1>
-      <NewToDo />
+      <NewToDo 
+        addNewTodo={addNewTodo}
+      />
       <ListTodo 
         todoList={todoList}
       />

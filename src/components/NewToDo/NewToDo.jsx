@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import styles from './NewToDo.module.css'
 
-const NewToDo = () => {
+const NewToDo = (props) => {
+    const { addNewTodo } = props;
     // useState hook
     // const valueInput = 'vango'
     const [valueInput, setValueInput] = useState('vango')
 
     const handleOnClick = () => {
         // alert('Add todo clicked')
-        console.log('Output', valueInput)
+        // console.log('Output', valueInput)
+       addNewTodo(valueInput)
     }
 
     const handleOnChange = (name) => {
