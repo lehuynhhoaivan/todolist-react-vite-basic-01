@@ -5,15 +5,15 @@ const NewToDo = () => {
         alert('Add todo clicked')
     }
 
-    const handleOnChange = (event) => {
-        console.log('Input changed', event.target.value)
+    const handleOnChange = (name) => {
+        console.log('Input changed', name)
     }
     return (
         <div className='new-todo'>
             <input 
             type='text' 
             placeholder='Enter your work ...' 
-            onChange={handleOnChange}
+            onChange={(event) => handleOnChange(event.target.value)}
             />
             <button 
             className={ styles.btnAdd }
