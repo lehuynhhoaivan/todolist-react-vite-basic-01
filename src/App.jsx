@@ -7,12 +7,20 @@ import ListTodo from './components/ListToDo/ListToDo.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [todoList, setToDoList] = useState([
+    { id: 1, learn: 'Learn React' },
+    { id: 2, learn: 'Learn Vite'},
+    { id: 3, learn: 'Learn JavaScript' }
+  ])
+  console.log('Todo List:', todoList)
 
   return (
     <>
     <h1>TodoList</h1>
       <NewToDo />
-      <ListTodo />
+      <ListTodo 
+        todoList={todoList}
+      />
     </>
   )
 }
