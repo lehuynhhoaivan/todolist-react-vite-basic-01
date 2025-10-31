@@ -14,7 +14,7 @@ function App() {
   ])
   console.log('Todo List:', todoList)
   const addNewTodo = (name) => {
-    const newTodo = { id: 5, name: name }
+    const newTodo = { id: crypto.randomUUID(), name: name } // Tạo ID duy nhất crypto.randomUUID()
     setToDoList([...todoList, newTodo])
   }
 
