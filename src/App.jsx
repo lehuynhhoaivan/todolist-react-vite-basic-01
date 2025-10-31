@@ -16,7 +16,6 @@ function App() {
   const addNewTodo = (name) => {
     const newTodo = { id: 5, name: name }
     setToDoList([...todoList, newTodo])
-    todoList.push(newTodo)
   }
 
   return (

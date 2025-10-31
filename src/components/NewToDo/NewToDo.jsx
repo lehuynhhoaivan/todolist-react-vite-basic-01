@@ -8,9 +8,9 @@ const NewToDo = (props) => {
     const [valueInput, setValueInput] = useState('vango')
 
     const handleOnClick = () => {
-        // alert('Add todo clicked')
         // console.log('Output', valueInput)
        addNewTodo(valueInput)
+       alert(`Add todo clicked ${valueInput}`)
     }
 
     const handleOnChange = (name) => {
