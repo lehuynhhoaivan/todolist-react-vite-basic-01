@@ -1,10 +1,24 @@
 import styles from './ListToDo.module.css'
 
 const ListTodo = (props) => {
+    // Cách 1
     const { todoList } = props;
+    console.log('ListTodo props:', todoList)
+    // Cách 2
+    // const todoList = props.todoList;
+    console.log('ListTodo props:', todoList)
     return (
         <ul className={ styles.listTodo }>
-            <li>Learn React</li>
+            <li>
+                {todoList.map((item, index) => {
+                    console.log('>>> Check map itm:', item, index)
+                    return (
+                        // <div>vango</div>
+                        <div>{item.name}</div>
+                    )
+                })}
+            </li>
+            {/* <li>Learn React</li> */}
             <li>
                 {JSON.stringify(props.todoList)}
             </li>

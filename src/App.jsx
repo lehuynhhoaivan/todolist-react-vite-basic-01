@@ -8,9 +8,9 @@ import ListTodo from './components/ListToDo/ListToDo.jsx'
 function App() {
   const [count, setCount] = useState(0)
   const [todoList, setToDoList] = useState([
-    { id: 1, learn: 'Learn React' },
-    { id: 2, learn: 'Learn Vite'},
-    { id: 3, learn: 'Learn JavaScript' }
+    { id: 1, name: 'Learn React' },
+    { id: 2, name: 'Learn Vite'},
+    { id: 3, name: 'Learn JavaScript' }
   ])
   console.log('Todo List:', todoList)
   const addNewTodo = (name) => {
