@@ -13,8 +13,11 @@ const ListTodo = (props) => {
                 {todoList.map((item, index) => {
                     console.log('>>> Check map itm:', item, index)
                     return (
-                        // <div>vango</div>
-                        <div>{item.name}</div>
+                        <>
+                            {/* <div>vango</div> */}
+                            <div>{item.name}</div>
+                            <button>Delete</button>
+                        </>
                     )
                 })}
             </li>

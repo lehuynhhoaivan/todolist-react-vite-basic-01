@@ -10,6 +10,7 @@ const NewToDo = (props) => {
     const handleOnClick = () => {
         // console.log('Output', valueInput)
        addNewTodo(valueInput)
+       setValueInput('')
        alert(`Add todo clicked ${valueInput}`)
     }
 
@@ -23,6 +24,7 @@ const NewToDo = (props) => {
             type='text' 
             placeholder='Enter your work ...' 
             onChange={(event) => handleOnChange(event.target.value)}
+            value={valueInput}
             />
             <button 
             className={ styles.btnAdd }
