@@ -9,18 +9,18 @@ const ListTodo = (props) => {
     console.log('ListTodo props:', todoList)
     return (
         <ul className={ styles.listTodo }>
-            <li>
+            
                 {todoList.map((item, index) => {
                     console.log('>>> Check map itm:', item, index)
                     return (
-                        <>
+                        <li key={item.id}>
                             {/* <div>vango</div> */}
                             <div>{item.name}</div>
                             <button>Delete</button>
-                        </>
+                        </li>
                     )
                 })}
-            </li>
+            
             {/* <li>Learn React</li> */}
             <li>
                 {JSON.stringify(props.todoList)}
