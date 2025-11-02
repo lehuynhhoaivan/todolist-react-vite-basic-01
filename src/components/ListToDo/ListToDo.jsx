@@ -10,7 +10,7 @@ const ListTodo = (props) => {
     return (
         <ul className={ styles.listTodo }>
             
-                {todoList.map((item, index) => {
+                {todoList.map((item, index) => { // Vẫn có thể dùng index làm key nếu không có id
                     console.log('>>> Check map itm:', item, index)
                     return (
                         <li key={item.id}>
